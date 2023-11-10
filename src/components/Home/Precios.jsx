@@ -10,10 +10,10 @@ export const Precios = () => {
                  <span>$4500</span> IVA incluido
                 </h3>
                 <ul>
-                    <li> &nbsp; Atención en el mismo día</li>
-                    <li> &nbsp; Te atendemos por WhatsApp</li>
-                    <li> &nbsp; Tiempo ilimitado de consulta</li>
-                    <li> &nbsp; Brindamos atención a todas las mascotas de hogar</li>
+                    <li> &nbsp;  Atención en el mismo día</li>
+                    <li> &nbsp;  Te atendemos por WhatsApp</li>
+                    <li> &nbsp;  Tiempo ilimitado de consulta</li>
+                    <li> &nbsp;  Brindamos atención a todas las mascotas de hogar</li>
                 </ul>
                 <button>
                     <p>Consulta</p>
