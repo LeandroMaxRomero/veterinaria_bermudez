@@ -1,0 +1,54 @@
+@use '../base/variables' as v;
+
+.container__navbar{
+    display: flex;
+    max-width: 130rem;
+    justify-content: space-between;
+    padding: 3.4rem 1rem 0 1rem;
+    margin: 0 auto;
+}
+
+h1{
+    color: #9168A4;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.container__navbar--title{
+    width: 11rem;
+    height: 4.4rem;
+}
+.container__navbar--logo{
+    display: flex;
+    gap: 1.9rem;
+}
+.container__navlist{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7rem;
+    a{
+        font-family: v.$fuente;
+        color: #343434;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 93px;
+        height: 37px;
+        border-radius: 10px;
+        border: 2px solid #9168A4;
+        background-color: white;
+        box-shadow: 2px 2px 4px 0px rgba(146, 105, 166, 0.55);
+
+        p{
+            color: #9168A4;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}
