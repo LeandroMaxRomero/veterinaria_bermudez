@@ -9,7 +9,7 @@
 }
 
 h1{
-    color: #9168A4;
+    color: v.$violeta;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
     font-size: 20px;
     font-weight: 700;
@@ -30,7 +30,7 @@ h1{
     gap: 7rem;
     a{
         font-family: v.$fuente;
-        color: #343434;
+        color: v.$gris;
         font-size: 16px;
         font-weight: 400;
     }
@@ -41,12 +41,12 @@ h1{
         width: 93px;
         height: 37px;
         border-radius: 10px;
-        border: 2px solid #9168A4;
+        border: 2px solid v.$violeta;
         background-color: white;
         box-shadow: 2px 2px 4px 0px rgba(146, 105, 166, 0.55);
 
         p{
-            color: #9168A4;
+            color: v.$violeta;
             font-size: 16px;
             font-weight: 500;
         }

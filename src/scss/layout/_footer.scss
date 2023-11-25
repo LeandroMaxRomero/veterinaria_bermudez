@@ -3,7 +3,7 @@
 .footer{
     width: 100%;
     height: 42rem;
-    background-color: #9168A4;
+    background-color: v.$violeta;
     font-family: v.$fuenteSF;
 }
 .container__footer{
@@ -14,11 +14,11 @@
     padding: 5rem 1rem 6.5rem 1rem;
     display: flex;
     flex-direction: column;
-    color: white;
+    color:v.$blanco;
     .divisor{
         max-width: 1300px;
         height: 2px;
-        background-color: white;
+        background-color: v.$blanco;
         opacity: 0.25;
     }
 }
@@ -67,14 +67,14 @@
     display: flex;
     flex-direction: column;
     h3{
-        color: white;
+        color: v.$blanco;
         font-size: 16px;
         font-weight: 700;
         margin: 0;
         padding-bottom: 1.6rem;
     }
     a{
-        color: white;
+        color: v.$blanco;
         font-size: 16px;
         font-weight: 400;
         margin-bottom: 1.6rem;
@@ -98,7 +98,7 @@
     gap: 4.2rem;
     a{
         font-family: v.$fuenteSF;
-        color: white;
+        color: v.$blanco;
         font-size: 16px;
         font-weight: 400;
     }

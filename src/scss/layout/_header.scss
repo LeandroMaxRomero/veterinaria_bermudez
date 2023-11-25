@@ -1,14 +1,48 @@
 @use '../base/variables' as v;
 
 .container__header{
+    position: relative;
+
+}
+.header--fondo{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    max-width: 130rem;
+    padding: 1rem 0;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 25% 35% 40%;
+    grid-template-rows: 60% 40%;
+    grid-template-areas: "a1 a2 a3"
+                         "a4 a5 a6";
+    .huella--uno{
+        grid-area: a4;
+        justify-self: center;
+        align-self: center;
+    }
+    .huella--dos{
+        grid-area: a2;
+        justify-self: center;
+        align-self: center;
+    }
+}
+.header--frente{
     height: 70rem;
     max-width: 130rem;
     margin: 0 auto;
     padding: 3.4rem 0 0 1rem;
     display: flex;
+    align-items: center;
     gap: 3rem;
     justify-content: space-between;
-    align-items: center;
+    
 }
 .header__column{
     width: 70rem;
@@ -17,13 +51,13 @@
     width: 55%;
     h2{
         margin: 0;
-        color: #9168A4;
+        color: v.$violeta;
         font-size: 50px;
         font-weight: 700;
         max-width: 700px;
     }
     p{
-        color: #343434;
+        color: v.$gris;
         font-size: 15px;
         font-weight: 400;
         margin: 25px auto;
@@ -34,13 +68,13 @@
         padding: 13px 45px; 
         text-align: center;
         border-radius: 10px;
-        background-color: #9168A4;
+        background-color: v.$violeta;
         box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
         p{
             width: 66px;
             height: 22px;
             margin: 0;
-            color:  #FFF;
+            color: v.$blanco;
             font-size: 15px;
             font-weight: 700;
         }

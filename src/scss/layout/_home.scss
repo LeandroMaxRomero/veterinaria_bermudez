@@ -1,10 +1,81 @@
+@use '../base/variables' as v;
+
 .container__proceso{
-    height: 686px;
+    height: 456px;
+    width: 100%;
+    box-shadow: (0px 0px 10px rgba(0, 0, 0, 0.25));
+}
+.proceso__contenido{
+    height: 100%;
     max-width: 130rem;
     margin: 0 auto;
     padding: 0 1rem;
-    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    h2{
+        color: v.$violeta;
+        font-family: v.$fuente;
+        font-size: 4rem;
+        font-style: normal;
+        font-weight: 700;
+        margin: 0;
+    }
+
 }
+.proceso__serie{
+    display: grid;
+    align-self: center;
+    justify-items: center;
+    align-items: center;
+    max-width: 1069px;
+    grid-template-columns: 24.93% 11.3% 24.93% 11.3% 27.53%;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "a1 a2 a3 a4 a5"
+                         "a6 a7 a8 a9 a10";
+    .icono--uno{
+        grid-area: a1;
+    }
+    .icono--dos{
+        grid-area: a3;
+    }
+    .icono--tres{
+        grid-area: a5;
+    }
+    .flecha1{
+        grid-area: a2;
+    }
+    .flecha2{
+        grid-area: a4;
+    }
+    .texto--uno{
+        grid-area: a6;
+    }
+    .texto--dos{
+        grid-area: a8;
+    }
+    .texto--tres{
+        grid-area: a10;
+    }
+}
+.proceso__texto{
+    width: 100%;
+    p{
+        color: v.$gris;
+        text-align: center;
+        font-family: v.$fuente;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        max-width: 26.9rem;
+        margin: 0;
+        &:last-child{
+            max-width: 29.7rem;
+        }
+    }
+}
+
+
 .container__precios{
     max-width: 130rem;
     height: 67.3rem;
@@ -18,9 +89,9 @@
     width: 420px;
     height: 440px;
     border-radius: 10px;
-    background: #9168A4;
+    background: v.$violeta;
     box-shadow: 4px 4px 17px 5px rgba(0, 0, 0, 0.25);
-    color: #FFF;
+    color: v.$blanco;
     display: flex;
     flex-direction: column;
     padding: 56px 40px 36px 40px;
@@ -58,12 +129,12 @@
         width: 156px;
         height: 48px;
         border-radius: 10px;
-        background-color: #FFF;
+        background-color: v.$blanco;
         box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
         padding: 13px 45px;
         align-self: center;
         p{
-            color: #9168A4;
+            color:v.$violeta;
             font-size: 15px;
             font-weight: 700;
         }
@@ -75,7 +146,7 @@
     h2{
         margin: 0;
         margin-bottom: 2.5rem;
-        color: #9168A4;
+        color: v.$violeta;
         font-size: 50px;
         font-weight: 700;
     }
@@ -83,7 +154,7 @@
         align-self: center;
         margin: 0;
         width: 90%;
-        color: #343434;
+        color: v.$gris;
         font-size: 25px;
         font-weight: 400;
     }

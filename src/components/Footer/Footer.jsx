@@ -39,11 +39,11 @@ export const Footer = () => {
           </div>
           <div className="footer__nav">
             <h3>Navegación</h3>
-            <Link>Inicio</Link>
+            <Link to="/">Inicio</Link>
             <Link>Cómo funciona</Link>
             <Link>Precios</Link>
-            <Link>Soporte</Link>
-            <Link>Consulta</Link>
+            <Link to="/soporte">Soporte</Link>
+            <Link to="/consulta">Consulta</Link>
 
           </div>
         </div>

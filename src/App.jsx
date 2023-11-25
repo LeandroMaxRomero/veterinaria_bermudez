@@ -15,8 +15,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />}/>
-          <Route path="/" element={<Soporte />}/>
-          <Route path="/" element={<Consulta />}/>
+          <Route path="/soporte" element={<Soporte />}/>
+          <Route path="/consulta" element={<Consulta />}/>
         </Routes>
         <Footer />
       </BrowserRouter>

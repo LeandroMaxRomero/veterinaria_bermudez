@@ -1,4 +1,5 @@
-// import { ItemOK } from "./ItemOK"
+import { Link } from "react-router-dom"
+
 
 export const Precios = () => {
   return (
@@ -15,9 +16,11 @@ export const Precios = () => {
                     <li> &nbsp;  Tiempo ilimitado de consulta</li>
                     <li> &nbsp;  Brindamos atención a todas las mascotas de hogar</li>
                 </ul>
-                <button>
-                    <p>Consulta</p>
-                </button>
+                <Link to="/consulta">
+                    <button>
+                        <p>Consulta</p>
+                    </button>
+                </Link>
 
             </div>
 
