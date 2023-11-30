@@ -4,7 +4,7 @@ import { Proceso } from "./Proceso"
 
 export const HomePage = () => {
   return (
-    <div className="container__home">
+    <div className="container__home" id="home">
       <Header />
       <Proceso />
       <Precios />

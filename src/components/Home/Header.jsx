@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 export const Header = () => {
   return (
-    <div className="container__header">
+    <div className="container__header" id="header">
 
       <div className="header--fondo">
         <svg width="346" height="346" viewBox="0 0 346 346" fill="none" xmlns="http://www.w3.org/2000/svg" className="huella--uno">

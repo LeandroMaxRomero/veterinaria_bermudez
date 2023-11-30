@@ -1,4 +1,5 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
 .container__navbar{
     display: flex;
@@ -6,6 +7,9 @@
     justify-content: space-between;
     padding: 3.4rem 1rem 0 1rem;
     margin: 0 auto;
+    @include m.mobile {
+        display: none;
+    }
 }
 
 h1{
@@ -51,4 +55,76 @@ h1{
             font-weight: 500;
         }
     }
+    @include m.mobile {
+        flex-direction: column;        
+    }
+}
+
+
+.container__navbar--mobile{
+    display: none;
+    @include m.mobile{
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+        margin: 0 auto;
+        padding: 0 1rem;
+        backdrop-filter: blur(5px);
+    }
+}
+.boton__menuDesplegable{
+    img{
+        width: 5rem;
+        height: 5rem;
+    }
+    svg{
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-right: 1.2rem;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}
+.navlist--mobile{
+    display: none;
+    &.show{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        margin-top: 7rem;
+        background-color: v.$blanco;
+        display: flex;
+        flex-direction: column;
+        width: 68rem;
+        height: 673rem;
+        box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.25);    
+    }
+    a{
+        color: v.$gris;
+        font-family: v.$fuente;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 110.8%;
+        padding-left: 1.5rem;
+        &:last-child{
+            color: var(--Blanco, #FFF);
+            font-family: Noto Sans JP;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 110.8%;
+            background-color: v.$violeta;
+        }
+    }
+    h4{
+        margin: 0;
+        padding: 1.25rem 0;
+    }
+    
 }

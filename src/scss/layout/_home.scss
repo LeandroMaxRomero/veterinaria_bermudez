@@ -1,9 +1,18 @@
 @use '../base/variables' as v;
+@use '../base/mixins' as m;
 
+.container__home{
+    @include m.mobile {
+        padding-top: 8rem;
+    }
+}
 .container__proceso{
     height: 456px;
     width: 100%;
     box-shadow: (0px 0px 10px rgba(0, 0, 0, 0.25));
+    @include m.mobile {
+        height: 100%;
+    }
 }
 .proceso__contenido{
     height: 100%;
@@ -13,6 +22,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    @include m.mobile {
+        width: 100%;
+        max-width: 39rem;
+        padding: 8.2rem 1rem;
+        align-items: center;
+    }
     h2{
         color: v.$violeta;
         font-family: v.$fuente;
@@ -20,6 +35,9 @@
         font-style: normal;
         font-weight: 700;
         margin: 0;
+        @include m.mobile {
+            padding-bottom: 8.2rem;
+        }
     }
 
 }
@@ -33,6 +51,21 @@
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "a1 a2 a3 a4 a5"
                          "a6 a7 a8 a9 a10";
+    @include m.mobile {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr 0.5fr 1.5fr 1fr 0.5fr 1.5fr 1fr 0.5fr;
+        grid-template-areas: "a1" "a6" "a2" "a3" "a8" "a4" "a5" "a10";
+
+        .flecha1,.flecha2{
+            transform: rotate(90deg);
+        }
+        .proceso__texto{
+            display: flex;
+            justify-content: center;
+        }
+        
+    }
     .icono--uno{
         grid-area: a1;
     }
@@ -84,6 +117,19 @@
     display: flex;
     align-items: center;
     gap: 5%;
+    @include m.mobile {
+        height: 100%;
+        max-width: 39rem;
+        flex-direction: column-reverse;
+        padding: 9.5rem 0;
+    }
+}
+.column--card{
+    @include m.mobile {
+        max-width: 39rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
 }
 .card--precios{
     width: 420px;
@@ -95,6 +141,11 @@
     display: flex;
     flex-direction: column;
     padding: 56px 40px 36px 40px;
+    @include m.mobile {
+        padding-top: 42px;
+        padding: 42px 36px 32px 36px;
+        height: 100%;
+    }
     h3{
         margin: 0;
         text-align: center;
@@ -105,6 +156,9 @@
         span{
             font-size: 50px;
         }
+        @include m.mobile {
+            padding-bottom: 1.2rem;
+        }
     }
     p{
         margin: 0;
@@ -114,6 +168,8 @@
     }
     ul{
         margin: 0;
+        display: flex;
+        flex-direction: column;
     }
 
     li{
@@ -123,7 +179,13 @@
         font-size: 20px;
         font-weight: 400;
         padding-bottom: 2rem;
+        @include m.mobile {
+            font-size: 18px;
+        }
 
+    }
+    a{
+        align-self: center;
     }
     button{
         width: 156px;
@@ -143,12 +205,21 @@
 .column--cobertura{
     display: flex;
     flex-direction: column;
+    @include m.mobile {
+        margin-bottom: 2.8rem;
+        max-width: 39rem;
+    }
     h2{
         margin: 0;
         margin-bottom: 2.5rem;
         color: v.$violeta;
         font-size: 50px;
         font-weight: 700;
+        @include m.mobile {
+            text-align: center;
+            font-size: 40px;
+            line-height: 110.8%;
+        }
     }
     p{
         align-self: center;
@@ -157,5 +228,9 @@
         color: v.$gris;
         font-size: 25px;
         font-weight: 400;
+        @include m.mobile {
+            text-align: justify;
+            font-size: 18px;
+        }
     }
 }

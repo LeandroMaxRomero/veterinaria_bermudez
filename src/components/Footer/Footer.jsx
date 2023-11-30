@@ -40,8 +40,8 @@ export const Footer = () => {
           <div className="footer__nav">
             <h3>Navegación</h3>
             <Link to="/">Inicio</Link>
-            <Link>Cómo funciona</Link>
-            <Link>Precios</Link>
+            <a href="/#proceso">Cómo funciona</a>
+            <a href="/#precios">Precios</a>
             <Link to="/soporte">Soporte</Link>
             <Link to="/consulta">Consulta</Link>
 

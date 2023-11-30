@@ -1,13 +1,16 @@
 @use '../base/variables' as v;
-
+@use '../base/mixins' as m;
 .container__consulta{
     max-width: 130rem;
-    margin: 4.5rem auto;
-    padding: 0 1rem;
+    margin: 0 auto;
+    padding: 4.5rem 1rem;
     display: grid;
     justify-content: center;
     grid-template-columns: 49.23% 40.77%;
     column-gap: 10%;
+    @include m.mobile {
+        padding-top: 8rem;
+    }
 }
 .consulta__formulario{
     display: flex;

@@ -4,7 +4,7 @@ export const Consulta = () => {
   return (
     <div className="container__consulta">
       <div className="consulta__formulario">
-        <form action="" className="form">
+        <form className="form">
         <h2>Datos de contacto</h2>
         <div className="input-doble">
           <input type="text" placeholder="Nombre*" className="campo-texto form-nombre"/>

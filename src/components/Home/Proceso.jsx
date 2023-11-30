@@ -1,7 +1,8 @@
 
+
 export const Proceso = () => {
   return (
-    <div className="container__proceso">
+    <div className="container__proceso" id="proceso">
       <div className="proceso__contenido">
         <h2>¿Cómo funciona?</h2>
         <div className="proceso__serie">

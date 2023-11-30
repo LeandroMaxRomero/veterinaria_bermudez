@@ -5,6 +5,7 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { HomePage } from "./components/Home/HomePage";
 import { Soporte } from "./components/Soporte/Soporte";
 import { Consulta } from "./components/Consulta/Consulta";
+import { NavbarMobile } from "./components/Navbar/NavbarMobile";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <React.Fragment>
       <BrowserRouter>
         <Navbar />
+        <NavbarMobile />
         <Routes>
           <Route path="/" element={<HomePage />}/>
           <Route path="/soporte" element={<Soporte />}/>
