@@ -29,7 +29,7 @@ export const Consulta = () => {
 
         <div className="boton-pedido">
           <button>Realizar el pedido</button>
-          <p>Al continuar aceptas nuestros <Link><u>términos y condiciones</u></Link></p>
+          <p>Al continuar aceptas nuestros <Link><u>términos y condiciones.</u></Link></p>
         </div>
 
       </div>

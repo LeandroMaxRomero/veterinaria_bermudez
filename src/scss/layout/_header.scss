@@ -33,7 +33,17 @@
         justify-self: center;
         align-self: center;
     }
+    @include m.tablet {
+        max-width: 78rem;
+        height: 50rem;
+        grid-template-rows: 50% 50%;
+        .huella--uno{
+            justify-self: center;
+        }
+    }
     @include m.mobile {
+        height: 100%;
+        max-width: 39rem;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 25% 25% 50%;
         grid-template-areas: "a1 a2"
@@ -54,6 +64,10 @@
     align-items: center;
     gap: 3rem;
     justify-content: space-between;
+    @include m.tablet {
+        max-width: 78rem;
+        height: 50rem;
+    }
     @include m.mobile {
         flex-direction: column;
         padding: 0 1rem;
@@ -76,6 +90,9 @@
         font-size: 50px;
         font-weight: 700;
         max-width: 700px;
+        @include m.tablet {
+            font-size: 4.5rem;
+        }
         @include m.mobile {
             font-size: 40px;
             font-style: normal;

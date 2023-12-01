@@ -3,11 +3,17 @@
 .container__consulta{
     max-width: 130rem;
     margin: 0 auto;
-    padding: 4.5rem 1rem;
+    padding: 12rem 1rem 4.5rem;
     display: grid;
     justify-content: center;
     grid-template-columns: 49.23% 40.77%;
     column-gap: 10%;
+    @include m.tablet {
+        max-width: 78rem;
+        display: flex;
+        flex-direction: column;
+        padding-top: 16rem;
+    }
     @include m.mobile {
         padding-top: 8rem;
     }
@@ -63,6 +69,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include m.tablet {
+        flex-direction: row;
+        height: 100%;
+        gap: 2rem;
+    }
     h2{
         color: v.$violeta;
         font-family: v.$fuente;
@@ -70,6 +81,9 @@
         font-style: normal;
         font-weight: 700;
         line-height: normal;
+        @include m.tablet {
+            text-align: center;
+        }
     }
 }
 .box--precio{
@@ -77,24 +91,36 @@
     background-color: v.$violeta;
     width: 100%;
     height: 48px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem 0 1rem;
-
+    gap: 2rem;
+    text-align: center;
+    @include m.tablet {
+        flex-direction: column;
+        height: 10rem;
+        padding: 1rem;
+        gap: 1rem;
+    }
     p{
         color: v.$blanco;
         font-family: v.$fuente;
         font-size: 2rem;
         font-style: normal;
         font-weight: 700;
+        @include m.tablet {
+            margin: 0;
+        }
     }
 }
 .boton-pedido{
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include m.tablet {
+        justify-content: center;
+    }
     button{
         display: flex;
         width: 309px;

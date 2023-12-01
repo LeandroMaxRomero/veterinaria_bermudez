@@ -6,9 +6,9 @@ export const NavList = () => {
 
   return (
     <div className='container__navlist'>
-        <Link to="/">
+        <a href="/#home">
             <h4>Inicio</h4>
-        </Link>
+        </a>
         <a href="/#proceso">
             <h4>Cómo funciona</h4>
         </a>

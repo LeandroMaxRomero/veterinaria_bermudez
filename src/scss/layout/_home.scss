@@ -2,6 +2,10 @@
 @use '../base/mixins' as m;
 
 .container__home{
+    padding-top: 8rem;
+    @include m.tablet {
+        padding-top: 14rem;
+    }
     @include m.mobile {
         padding-top: 8rem;
     }
@@ -18,10 +22,13 @@
     height: 100%;
     max-width: 130rem;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 6rem 1rem 0;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    @include m.tablet {
+        max-width: 78rem;
+    }
     @include m.mobile {
         width: 100%;
         max-width: 39rem;
@@ -117,18 +124,29 @@
     display: flex;
     align-items: center;
     gap: 5%;
-    @include m.mobile {
+    @include m.tablet {
+        width: 100%;
         height: 100%;
-        max-width: 39rem;
+        max-width: 78rem;
         flex-direction: column-reverse;
+        padding: 9.5rem 0;
+    }
+    @include m.mobile {
+        max-width: 39rem;
         padding: 9.5rem 0;
     }
 }
 .column--card{
-    @include m.mobile {
-        max-width: 39rem;
+    display: flex;
+    justify-content: center;
+    @include m.tablet {
+        max-width: 78rem;
         width: 100%;
         padding: 0 1rem;
+        margin-top: 2.5rem;
+    }
+    @include m.mobile {
+        max-width: 39rem;
     }
 }
 .card--precios{
@@ -215,8 +233,11 @@
         color: v.$violeta;
         font-size: 50px;
         font-weight: 700;
-        @include m.mobile {
+        @include m.tablet {
+            font-size: 45px;
             text-align: center;
+        }
+        @include m.mobile {
             font-size: 40px;
             line-height: 110.8%;
         }

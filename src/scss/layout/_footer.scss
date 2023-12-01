@@ -19,6 +19,9 @@
     display: flex;
     flex-direction: column;
     color:v.$blanco;
+    @include m.tablet {
+        max-width: 78rem;
+    }
     @include m.mobile {
         padding-bottom: 0.5rem;
         max-width: 39rem;
@@ -62,6 +65,12 @@
         font-size: 40px;
         font-weight: 700;
         margin: 0;
+        @include m.tablet {
+            font-size: 30px;
+        }
+        @include m.mobile {
+            font-size: 40px;
+        }
     }
     .container--datos{
         display: flex;
