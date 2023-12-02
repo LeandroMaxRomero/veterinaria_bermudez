@@ -7,20 +7,19 @@ import { Soporte } from "./components/Soporte/Soporte";
 import { Consulta } from "./components/Consulta/Consulta";
 import { NavbarMobile } from "./components/Navbar/NavbarMobile";
 
-
 function App() {
   
   return (
     <React.Fragment>
       <BrowserRouter>
-        <Navbar />
-        <NavbarMobile />
-        <Routes>
-          <Route path="/" element={<HomePage />}/>
-          <Route path="/soporte" element={<Soporte />}/>
-          <Route path="/consulta" element={<Consulta />}/>
-        </Routes>
-        <Footer />
+          <Navbar />
+          <NavbarMobile />
+          <Routes>
+            <Route path="/" element={<HomePage />}/>
+            <Route path="/soporte" element={<Soporte />}/>
+            <Route path="/consulta" element={<Consulta />}/>
+          </Routes>
+          <Footer />
       </BrowserRouter>
     </React.Fragment>
   )
