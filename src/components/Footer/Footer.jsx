@@ -39,7 +39,7 @@ export const Footer = () => {
           </div>
           <div className="footer__nav">
             <h3>Navegación</h3>
-            <Link to="/">Inicio</Link>
+            <a href="/#home">Inicio</a>
             <a href="/#proceso">Cómo funciona</a>
             <a href="/#precios">Precios</a>
             <Link to="/soporte">Soporte</Link>

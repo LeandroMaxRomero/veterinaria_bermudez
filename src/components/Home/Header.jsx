@@ -31,11 +31,15 @@ export const Header = () => {
               </button>
             </Link>
         </div>
-        <div className="header__img">
+        <div className="header__img--mobile">
             <img src="img/dog-header.png" alt="imagen de perro" />
-        </div>
       </div>
-
+        
+      </div>
+      <div className="header__img">
+            <img src="img/imagen-header.png" alt="imagen de perro" />
+      </div>
+      
     </div>
   )
 }

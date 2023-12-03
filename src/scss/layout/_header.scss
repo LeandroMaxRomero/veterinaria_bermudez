@@ -35,6 +35,7 @@
     @include m.tablet {
         max-width: 78rem;
         height: 50rem;
+        padding-top: 0;
         grid-template-rows: 50% 50%;
         .huella--uno{
             justify-self: center;
@@ -63,9 +64,11 @@
     align-items: center;
     gap: 3rem;
     justify-content: space-between;
+    position: relative;
     @include m.tablet {
         max-width: 78rem;
         height: 50rem;
+        padding-top: 0;
     }
     @include m.mobile {
         flex-direction: column;
@@ -83,6 +86,7 @@
     display: flex;
     flex-direction: column;
     width: 55%;
+    position: absolute;
     h2{
         margin: 0;
         color: v.$violeta;
@@ -90,12 +94,14 @@
         font-weight: 700;
         max-width: 700px;
         @include m.tablet {
-            font-size: 4.5rem;
+            font-size: 3.8rem;
+            width: 95%;
         }
         @include m.mobile {
             font-size: 40px;
             font-style: normal;
             line-height: 110.8%;
+            width: 100%;
         }
     }
     p{
@@ -133,16 +139,44 @@
     }
     @include m.mobile {
         width: 100%;
+        position: inherit;
     }
 }
 
 .header__img{
-    width: 45%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-left: 58%;
+    overflow-x: hidden;
+    padding-top: 5rem;
     img{
-        border-top-left-radius: 50%;
-        border-bottom-left-radius: 50%;
+        border-top-left-radius: 0%;
+        border-bottom-left-radius: 0%;
+        min-width: 1940px;
+    }
+    @include m.tablet {
+        padding-top: 0;
+        padding-left: 55%;
+        img{
+            padding-top: 0;
+            max-height: 500px;
+            height: 100%;
+            width: 100%;
+            object-fit:cover;
+        }
     }
     @include m.mobile {
+        display: none;
+    }
+   
+
+}
+.header__img--mobile{
+    display: none;
+    @include m.mobile {
+        display: block;
         width: 100%;
         max-width: 39rem;
         height: auto;
