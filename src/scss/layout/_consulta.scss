@@ -52,6 +52,7 @@
     border: 1px solid #8D8D8D;
     height: 4.8rem;
     margin-bottom: 2rem;
+    padding-left: 1rem;
 
 }
 .input-doble{
@@ -74,6 +75,7 @@
 }
 .textarea{
     min-height: 22.4rem;
+    resize: none;
 }
 
 .consulta__pedido{
@@ -112,7 +114,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem 0 1rem;
+    padding: 0 2rem;
     gap: 2rem;
     text-align: center;
     @include m.tablet {
@@ -156,13 +158,25 @@
         gap: 10px;
         border-radius: 10px;
         background: #9168A4;
+        border: 0;
         box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
-        color: v.$blanco;
-        font-family: v.$fuente;
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
+        &:hover{
+            background-color: v.$lila;
+            transition: ease-in 0.25s;
+            a{
+                color: v.$grisClaro;
+                transition: ease-in 0.25s;
+            }
+        }
+        a{
+            color: v.$blanco;
+            font-family: v.$fuente;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+
+        }
         @include m.mobile {
             width: 100%;
         }
@@ -174,11 +188,47 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        &:hover{
+            u{
+                color: v.$negro;
+            }
+        }
         @include m.mobile {
             width: 100%;
         }
     }
+    a:hover{
+        u{
+            color: v.$negro;
+        }
+    }
     u{
         text-decoration-style: dotted
+    }
+}
+
+.link-checkout{
+    color: #8D8D8D;
+        font-family: v.$fuente;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        @include m.mobile {
+            width: 100%;
+        }
+}
+
+.container__checkout{
+    margin-left: 2rem;
+    padding-top: 12rem;
+    color: #8D8D8D;
+    font-family: v.$fuente;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    button{
+        margin-bottom: 2rem;
     }
 }

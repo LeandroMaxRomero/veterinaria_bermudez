@@ -10,13 +10,7 @@ export const Consulta = () => {
   const [comentario, setComentario] = useState('')
   const [mail, setMail] = useState('')
 
-  let mensaje = '';
-
-  
-
   const handleSubmit = () =>{
-
-   
 
     if(nombre == '' || apellido =='' || numeroTel == '' || mail == ''|| comentario == ''){
         alert("Debe completar todos los campos")
@@ -29,31 +23,22 @@ export const Consulta = () => {
           comentarioUser: comentario
       }
       
-      console.log(usuario);
+      // console.log(usuario);
 
-      const textoWats = [
-        "*MENSAJE AUTOMÁTICO*. Mi nombre es ",
-        "Mi número es: ",
-        "Mi mail de contacto es: ",
-        "Descripción del problema: "
-      ]
-      
-      const btnEnvio = document.querySelector('#link-enviar');
+      let usuarioJSON = JSON.stringify(usuario);
+      console.log(usuarioJSON)
+      console.log(typeof usuarioJSON)
 
-      let {nombreUser,apellidoUser,numeroTelUser, mailUser, comentarioUser} = usuario;
+      localStorage.setItem("userLocal", usuarioJSON);
 
-      console.log("Este es nombre prueba: "+ nombreUser);
-      console.log("Este es apellido prueba: "+ apellidoUser);
-      console.log("Este es número prueba: "+ numeroTelUser);
-      mensaje =  `https://api.whatsapp.com/send?phone=542622314506&text=${textoWats[0]}${nombreUser}%20${apellidoUser}%0D%0A${textoWats[1]}${numeroTelUser}%0D%0A${textoWats[2]}${mailUser}%0D%0A${textoWats[3]}${comentarioUser}`;
-      btnEnvio.href = mensaje;
+      let userData = localStorage.getItem("userLocal");
+      console.log(userData)
+      console.log(typeof userData)
+
+      userData = JSON.parse(userData);
+      console.log(userData);
+      console.log(typeof userData);
     }
-    // console.log(usuario);
-    
-  
-    // const enviar = (usuario) => {
-  // }
-
   }
 
 
@@ -108,16 +93,18 @@ export const Consulta = () => {
         </div>
 
         <div className="boton-pedido">
-
-
           <button type="submit"
           onClick={() => handleSubmit()}>
-            <a href={mensaje} id="link-enviar" >
+            <a href="">
               Realizar el pedido
             </a>
           </button>
           
           <p>Al continuar aceptas nuestros <Link><u>términos y condiciones.</u></Link></p>
+        <p className="link-checkout">
+          <Link to="/checkout">Ir al Ckeckout
+          </Link>
+        </p>
         </div>
 
       </div>

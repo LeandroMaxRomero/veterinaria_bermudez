@@ -147,6 +147,7 @@
     }
     @include m.mobile {
         max-width: 39rem;
+        padding: 0;
     }
 }
 .card--precios{
@@ -159,10 +160,10 @@
     display: flex;
     flex-direction: column;
     padding: 56px 40px 36px 40px;
+    height: 100%;
     @include m.mobile {
         padding-top: 42px;
         padding: 42px 36px 32px 36px;
-        height: 100%;
     }
     h3{
         margin: 0;
@@ -188,15 +189,16 @@
         margin: 0;
         display: flex;
         flex-direction: column;
+        gap: 2rem;
+        padding-left: 0;
     }
 
     li{
         list-style-image:url('img/check.svg');
-        list-style-position: outside;
+        list-style-position: inside;
         margin: 0;
         font-size: 20px;
         font-weight: 400;
-        padding-bottom: 2rem;
         @include m.mobile {
             font-size: 18px;
         }
@@ -212,7 +214,16 @@
         background-color: v.$blanco;
         box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
         padding: 13px 45px;
-        align-self: center;
+        margin-top: 3.6rem;
+        border: 0;
+        &:hover{
+            background-color: v.$grisClaro;
+            transition: ease-in-out 0.25s;
+            p{
+                color: v.$lila;
+                transition: ease-in-out 0.25s;
+            }
+        }
         p{
             color:v.$violeta;
             font-size: 15px;
@@ -250,8 +261,10 @@
         font-size: 25px;
         font-weight: 400;
         @include m.mobile {
-            text-align: justify;
-            font-size: 18px;
+            text-align: center;
+            font-size: 20px;
+            padding: 0 1rem;
+            width: 100%;
         }
     }
 }

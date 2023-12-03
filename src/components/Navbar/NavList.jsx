@@ -6,16 +6,16 @@ export const NavList = () => {
 
   return (
     <div className='container__navlist'>
-        <a href="/#home">
+        <a href="/#home" className="navlink">
             <h4>Inicio</h4>
         </a>
-        <a href="/#proceso">
+        <a href="/#proceso" className="navlink">
             <h4>Cómo funciona</h4>
         </a>
-        <a href="/#precios">
+        <a href="/#precios" className="navlink">
             <h4>Precios</h4>
         </a>
-        <Link to="/soporte">
+        <Link to="/soporte" className="navlink">
             <h4>Soporte</h4>
         </Link>
         <Link to="/consulta">

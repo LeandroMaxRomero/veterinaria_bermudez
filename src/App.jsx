@@ -6,6 +6,7 @@ import { HomePage } from "./components/Home/HomePage";
 import { Soporte } from "./components/Soporte/Soporte";
 import { Consulta } from "./components/Consulta/Consulta";
 import { NavbarMobile } from "./components/Navbar/NavbarMobile";
+import { Checkout } from "./components/Consulta/Checkout";
 
 function App() {
   
@@ -18,6 +19,8 @@ function App() {
             <Route path="/" element={<HomePage />}/>
             <Route path="/soporte" element={<Soporte />}/>
             <Route path="/consulta" element={<Consulta />}/>
+            <Route path="/checkout" element={<Checkout />}/>
+
           </Routes>
           <Footer />
       </BrowserRouter>
