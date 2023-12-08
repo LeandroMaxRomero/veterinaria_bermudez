@@ -196,6 +196,7 @@
     li{
         list-style-image:url('img/check.svg');
         list-style-position: inside;
+        font-family: v.$fuente;
         margin: 0;
         font-size: 20px;
         font-weight: 400;
@@ -217,10 +218,10 @@
         margin-top: 3.6rem;
         border: 0;
         &:hover{
-            background-color: v.$grisClaro;
+            background-color: v.$grisFondo;
             transition: ease-in-out 0.25s;
             p{
-                color: v.$lila;
+                color: v.$violetaOscuro;
                 transition: ease-in-out 0.25s;
             }
         }

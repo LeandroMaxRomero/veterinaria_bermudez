@@ -9,35 +9,26 @@ export const Consulta = () => {
   const [numeroTel, setNumeroTel] = useState('')
   const [comentario, setComentario] = useState('')
   const [mail, setMail] = useState('')
+  let [planilla, setPlanilla] = useState(false);
 
   const handleSubmit = () =>{
-
+    
     if(nombre == '' || apellido =='' || numeroTel == '' || mail == ''|| comentario == ''){
-        alert("Debe completar todos los campos")
+      alert("Debe completar todos los campos")
+      console.log(planilla) 
     }else{
-       let usuario = {
-          nombreUser: nombre,
-          apellidoUser: apellido,
-          numeroTelUser: numeroTel,
-          mailUser: mail,
-          comentarioUser: comentario
+      planilla = setPlanilla(!planilla)
+      console.log(planilla) 
+      let usuario = {
+        nombreUser: nombre,
+        apellidoUser: apellido,
+        numeroTelUser: numeroTel,
+        mailUser: mail,
+        comentarioUser: comentario
       }
-      
-      // console.log(usuario);
-
       let usuarioJSON = JSON.stringify(usuario);
-      console.log(usuarioJSON)
-      console.log(typeof usuarioJSON)
-
       localStorage.setItem("userLocal", usuarioJSON);
-
-      let userData = localStorage.getItem("userLocal");
-      console.log(userData)
-      console.log(typeof userData)
-
-      userData = JSON.parse(userData);
-      console.log(userData);
-      console.log(typeof userData);
+      
     }
   }
 
@@ -95,7 +86,9 @@ export const Consulta = () => {
         <div className="boton-pedido">
           <button type="submit"
           onClick={() => handleSubmit()}>
-            <a href="">
+            <a href={(planilla === true ? "https://mpago.la/2a77Qav" : "")}
+            target={(planilla === true ? "_blank" : "")}
+            rel={(planilla === true ? "noreferrer" : "")}>
               Realizar el pedido
             </a>
           </button>

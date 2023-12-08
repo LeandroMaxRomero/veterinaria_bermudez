@@ -9,7 +9,6 @@ export const Checkout = () => {
       // console.log(typeof userData);
 
       let {nombreUser,apellidoUser,numeroTelUser, mailUser, comentarioUser} = userData;
-//! Faltaría volcar estos datos a una función que envíe mensaje a WhatsApp
     let mensaje = '';
     const enviarMensaje = () =>{
 
