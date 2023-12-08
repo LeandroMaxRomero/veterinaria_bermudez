@@ -19,7 +19,7 @@ function App() {
             <Route path="/" element={<HomePage />}/>
             <Route path="/soporte" element={<Soporte />}/>
             <Route path="/consulta" element={<Consulta />}/>
-            <Route path="/checkout" element={<Checkout />}/>
+            <Route path="/checkout?collection_e id=MLA&processing mode=aggregator&merchant account id=null" element={<Checkout />}/>
 
           </Routes>
           <Footer />
