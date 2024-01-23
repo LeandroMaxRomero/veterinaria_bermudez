@@ -1,6 +1,9 @@
-import { useState } from "react"
-import { Link } from "react-router-dom"
-
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import Swal from 'sweetalert2';
+import { Pago } from "../Pago/Pago";
+// Public key: TEST-aea14fc6-7bdb-4cf2-a6d6-22abc5618a2f
+// Access token: TEST-2581844402384055-011622-3fb13bbca95ea90457e86f44a727f8e8-118950741
 
 export const Consulta = () => {
 
@@ -10,15 +13,21 @@ export const Consulta = () => {
   const [comentario, setComentario] = useState('')
   const [mail, setMail] = useState('')
   let [planilla, setPlanilla] = useState(false);
+  const [pedidoMP, setPedidoMP] = useState(false);
 
+  
   const handleSubmit = () =>{
     
     if(nombre == '' || apellido =='' || numeroTel == '' || mail == ''|| comentario == ''){
-      alert("Debe completar todos los campos")
-      console.log(planilla) 
+      Swal.fire({
+        html: `Debe completar todos los campos.`,
+        focusConfirm: true,
+        confirmButtonText: `Continuar`,
+        confirmButtonColor: "#9168A4",  
+         });
     }else{
       planilla = setPlanilla(!planilla)
-      console.log(planilla) 
+
       let usuario = {
         nombreUser: nombre,
         apellidoUser: apellido,
@@ -29,6 +38,7 @@ export const Consulta = () => {
       let usuarioJSON = JSON.stringify(usuario);
       localStorage.setItem("userLocal", usuarioJSON);
       
+      setPedidoMP(true);
     }
   }
 
@@ -84,16 +94,14 @@ export const Consulta = () => {
         </div>
 
         <div className="boton-pedido">
+
           <button type="submit"
           onClick={() => handleSubmit()}>
-            <a href={(planilla === true ? "https://mpago.la/2a77Qav" : "")}
-            target={(planilla === true ? "_blank" : "")}
-            rel={(planilla === true ? "noreferrer" : "")}>
-              Realizar el pedido
-            </a>
+              Realizar pedido
           </button>
-          
+
           <p>Al continuar aceptas nuestros <Link><u>términos y condiciones.</u></Link></p>
+
         <p className="link-checkout">
           <Link to="/checkout">Ir al Ckeckout
           </Link>
@@ -101,6 +109,11 @@ export const Consulta = () => {
         </div>
 
       </div>
+
+      <div className={(pedidoMP===false ? "ocultar" : "") + " consulta__alerta"}>
+        <Pago setPedidoMP={setPedidoMP} />
+      </div>
+
 
     </div>
   )

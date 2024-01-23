@@ -38,9 +38,6 @@ export const NavbarMobile = () => {
         <a href="/#precios">
             <h4>Precios</h4>
         </a>
-        <Link to="/soporte">
-            <h4>Soporte</h4>
-        </Link>
         <Link to="/consulta">
             <h4>Consulta</h4>
         </Link>

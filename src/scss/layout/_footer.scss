@@ -150,18 +150,21 @@
 .footer__redes{
     display: flex;
     gap: 2rem;
-    width: 100%;
+    width: 67%;
+    @include m.mobile {
+        width: 50%;
+    }
     
 }
 .footer__terminos{
     width: 33%;
     display: flex;
-    justify-content: center;
+    justify-content: baseline;
     gap: 4.2rem;
-    width: 100%;
     @include m.mobile {
         flex-direction: column;
         gap: 1rem;
+        width: 50%;
     }
     a{
         font-family: v.$fuenteSF;

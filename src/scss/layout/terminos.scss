@@ -1,0 +1,44 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.container__terminos{
+    padding: 16rem 1rem 0;
+    max-width: 130rem;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2{
+        align-self: baseline;
+        color: v.$violeta;
+        font-family: v.$fuente;
+        font-size: 4rem;
+        font-weight: 700;
+        @include m.mobile {
+            font-size: 2.8rem;
+        }
+    }
+    ol{
+        font-weight: 700;
+        max-width: 1080px;
+        margin-bottom: 3rem;
+    }
+    li{
+        list-style-position: inside;
+        color: v.$gris;
+        font-family: v.$fuente;
+        font-size: 2.5rem;
+        @include m.mobile {
+            font-size: 1.6rem;
+        }
+        p{
+            font-weight: 400;
+            margin-top: 0;
+        }
+        span{
+            font-weight: 700;
+        }
+    }
+}

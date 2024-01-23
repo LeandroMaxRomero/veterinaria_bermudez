@@ -42,7 +42,6 @@ export const Footer = () => {
             <a href="/#home">Inicio</a>
             <a href="/#proceso">Cómo funciona</a>
             <a href="/#precios">Precios</a>
-            <Link to="/soporte">Soporte</Link>
             <Link to="/consulta">Consulta</Link>
 
           </div>
@@ -64,8 +63,7 @@ export const Footer = () => {
             </Link>
           </div>
           <div className="footer__terminos">
-            <Link>Términos y condiciones</Link>
-            <Link>Políticas de privacidad</Link>
+            <Link to="/terminosycondiciones">Términos y condiciones</Link>
           </div>
         </div>
       </div>

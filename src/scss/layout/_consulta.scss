@@ -1,5 +1,6 @@
 @use '../base/variables' as v;
 @use '../base/mixins' as m;
+
 .container__consulta{
     max-width: 130rem;
     margin: 0 auto;
@@ -153,13 +154,18 @@
         display: flex;
         width: 309px;
         padding: 13px 45px;
+        font-size: 18px;
+        color: v.$blanco;
         justify-content: center;
         align-items: center;
         gap: 10px;
         border-radius: 10px;
-        background: #9168A4;
+        background: v.$violeta;
         border: 0;
         box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+        img{
+            height: 40px;
+        }
         &:hover{
             background-color: v.$lila;
             transition: ease-in 0.25s;
@@ -229,6 +235,50 @@
     font-weight: 400;
     line-height: normal;
     button{
-        margin-bottom: 2rem;
+        display: flex;
+        width: 309px;
+        padding: 13px 45px;
+        font-size: 18px;
+        color: v.$blanco;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        background: v.$violeta;
+        border: 0;
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+        img{
+            height: 40px;
+        }
+        &:hover{
+            background-color: v.$lila;
+            transition: ease-in 0.25s;
+            a{
+                color: v.$grisClaro;
+                transition: ease-in 0.25s;
+            }
+        }
+        a{
+            color: v.$blanco;
+            font-family: v.$fuente;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        @include m.mobile {
+            width: 100%;
+        }
+    }
+}
+
+.consulta__alerta{
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &.ocultar{
+        display: none;
     }
 }

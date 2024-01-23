@@ -48,6 +48,7 @@ export const Checkout = () => {
          onClick={() => enviarMensaje()}>
             <a href={mensaje} id="link-enviar" >
             Enviar consulta por WhatsApp
+              <img src="img/WhatsApp_icon.png" alt="logo WhatsApp" />
             </a>
         </button>
 
