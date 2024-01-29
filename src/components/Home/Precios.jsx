@@ -14,7 +14,7 @@ export const Precios = () => {
                     <li> &nbsp;  Atención en el mismo día</li>
                     <li> &nbsp;  Te atendemos por WhatsApp</li>
                     <li> &nbsp;  Tiempo ilimitado de consulta</li>
-                    <li> &nbsp;  Brindamos atención a todas las mascotas de hogar</li>
+                    <li> &nbsp;  Atendemos a perros, gatos y todas las mascotas del hogar</li>
                 </ul>
                 <Link to="/consulta">
                     <button>

@@ -151,6 +151,12 @@
     display: flex;
     gap: 2rem;
     width: 67%;
+    svg{
+        &:hover{
+            // font-weight: 700;
+            transform: scale(1.15);
+        }
+    }
     @include m.mobile {
         width: 50%;
     }
@@ -171,5 +177,8 @@
         color: v.$blanco;
         font-size: 16px;
         font-weight: 400;
+        &:hover{
+            font-weight: 700;
+        }
     }
 }

@@ -225,52 +225,6 @@
         }
 }
 
-.container__checkout{
-    margin-left: 2rem;
-    padding-top: 12rem;
-    color: v.$grisFondo;
-    font-family: v.$fuente;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    button{
-        display: flex;
-        width: 309px;
-        padding: 13px 45px;
-        font-size: 18px;
-        color: v.$blanco;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        border-radius: 10px;
-        background: v.$violeta;
-        border: 0;
-        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
-        img{
-            height: 40px;
-        }
-        &:hover{
-            background-color: v.$lila;
-            transition: ease-in 0.25s;
-            a{
-                color: v.$grisClaro;
-                transition: ease-in 0.25s;
-            }
-        }
-        a{
-            color: v.$blanco;
-            font-family: v.$fuente;
-            font-size: 15px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-        }
-        @include m.mobile {
-            width: 100%;
-        }
-    }
-}
 
 .consulta__alerta{
     display: block;
@@ -281,4 +235,145 @@
     &.ocultar{
         display: none;
     }
+}
+
+.container__checkout{
+    display: flex;
+    gap: 16rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 115rem;
+    padding: 18.2rem 1rem 14rem;
+    @include m.tablet {
+        flex-direction: column;
+        max-width: 78rem;
+        gap: 6rem;
+        padding-bottom: 12rem;
+    }
+    @include m.mobile {
+        padding: 12rem 1rem 12rem;
+        max-width: 39rem;
+    }
+
+    .checkout--agradecimiento{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        max-width: 56rem;
+        @include m.tablet {
+            margin: 0 auto;
+        }
+        h3{
+            color: v.$violeta;
+            font-family: v.$fuente;
+            font-size: 5rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            margin: 0;
+            @include m.mobile {
+                font-size: 4rem;
+            }
+        }
+        p{
+            color: v.$gris;
+            font-family: v.$fuente;
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin: 0;
+            @include m.mobile {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    .checkout--datos{
+        @include m.tablet {
+            margin: 0 auto;
+            max-width: 56rem;
+            display: flex;
+            flex-direction: column;
+        }
+        h3{
+            color: v.$violeta;
+            font-family: v.$fuente;
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin: 0;
+            padding-bottom: 1rem;
+            @include m.tablet {
+                padding-left: 4rem;
+            }
+            @include m.mobile {
+                padding-left: 0;
+                align-self: center;
+                font-size: 3rem;
+            }
+        }
+        p{
+            color: v.$grisFondo;
+            font-family: v.$fuente;
+            font-size: 1.5rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin: 0;
+            padding-bottom: 1.5rem;
+            span{
+                color: v.$gris;
+            }
+        }
+        button{
+            display: flex;
+            width: 30.9rem;
+            padding: 12px 25px;
+            margin-top: 1.5rem;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+    
+            border-radius: 10px;
+            box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+            
+            font-size: 15px;
+            color: v.$blanco;
+            justify-content: center;
+            align-items: center;
+            background: v.$violeta;
+            border: 0;
+            
+            &:hover{
+                background-color: v.$lila;
+                transition: ease-in 0.25s;
+                svg{
+                    transform: scale(1.2);
+                }
+                a{
+                    color: v.$grisClaro;
+                    transition: ease-in 0.25s;
+                }
+            }
+            a{
+                color: v.$blanco;
+                font-family: v.$fuente;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+            @include m.mobile {
+                width: 100%;
+            }
+            @include m.tablet {
+                align-self: center;
+            }
+        }
+    }
+
+
+    
 }
