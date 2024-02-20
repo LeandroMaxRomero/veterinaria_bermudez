@@ -15,6 +15,9 @@ export const NavList = () => {
         <a href="/#precios" className="navlink">
             <h4>Precios</h4>
         </a>
+        <a href="/#nosotros" className="navlink">
+            <h4>Nosotros</h4>
+        </a>
         <Link to="/consulta">
             <button>
                 <p>Consulta</p>

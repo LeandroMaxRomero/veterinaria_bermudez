@@ -75,7 +75,7 @@ h1{
     align-items: center;
     gap: 6rem;
     @include m.tablet{
-        gap: 3rem;
+        gap: 2rem;
     }
     .navlink{
         font-family: v.$fuente;
