@@ -13,7 +13,7 @@ export const Pago = ({ setPedidoMP }) => {
 
   const createPreference = async () => {
     try {
-      const response = await axios.post("http://https://server-vet.onrender.com/create_preference", {
+      const response = await axios.post("https://server-vet.onrender.com/create_preference", {
         title: "Consulta veterinaria",
         price: 1,
         quantity: 1,
