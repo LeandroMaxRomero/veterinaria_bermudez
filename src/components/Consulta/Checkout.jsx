@@ -1,14 +1,10 @@
 
 export const Checkout = () => {
     let userData = localStorage.getItem("userLocal");
-      // console.log(userData)
-      // console.log(typeof userData)
-
-      userData = JSON.parse(userData);
-      // console.log(userData);
-      // console.log(typeof userData);
-
-      let {nombreUser,apellidoUser,numeroTelUser, mailUser, comentarioUser} = userData;
+      
+    userData = JSON.parse(userData);
+     
+    let {nombreUser,apellidoUser,numeroTelUser, mailUser, comentarioUser} = userData;
     let mensaje = '';
     const enviarMensaje = () =>{
 

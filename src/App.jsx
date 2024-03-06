@@ -8,6 +8,7 @@ import { NavbarMobile } from "./components/Navbar/NavbarMobile";
 import { Checkout } from "./components/Consulta/Checkout";
 import { TermAndCond } from "./components/TerminosCondiciones/TermAndCond";
 import { Pago } from "./components/Pago/Pago";
+import { Error } from "./components/Error/Error";
 
 function App() {
   
@@ -21,6 +22,7 @@ function App() {
             <Route path="/consulta" element={<Consulta />}/>
             <Route path="/pago" element={<Pago />}/>
             <Route path="/checkout" element={<Checkout />}/>
+            <Route path="/error" element={<Error />}/>
             <Route path="/terminosycondiciones" element={<TermAndCond />}/>
             <Route path="/*" element={<h1>404 NOT FOUND</h1>}/>
 

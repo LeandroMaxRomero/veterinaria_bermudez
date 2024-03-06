@@ -102,10 +102,10 @@ export const Consulta = () => {
 
           <p>Al continuar aceptas nuestros <Link><u>términos y condiciones.</u></Link></p>
 
-        <p className="link-checkout">
+        {/* <p className="link-checkout">
           <Link to="/checkout">Ir al Ckeckout
           </Link>
-        </p>
+        </p> */}
         </div>
 
       </div>

@@ -5,16 +5,17 @@ import axios from "axios";
 import PropTypes from "prop-types";
 
 export const Pago = ({ setPedidoMP }) => {
+  const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
+  initMercadoPago(PUBLIC_KEY, {locale: "es-AR"});
+  
   const [preferenceId, setPreferenceId] = useState(null);
   const [confPedido, setConfPedido] = useState(false);
-
-  initMercadoPago('TEST-aea14fc6-7bdb-4cf2-a6d6-22abc5618a2f', {locale: "es-AR"});
 
   const createPreference = async () => {
     try {
       const response = await axios.post("http://localhost:3000/create_preference", {
-        description: "Consulta veterinaria",
-        price: 4500,
+        title: "Consulta veterinaria",
+        price: 1,
         quantity: 1,
       });
 
@@ -38,7 +39,7 @@ export const Pago = ({ setPedidoMP }) => {
       <p>Las consultas online no están pensadas para resolver situaciones de alta complejidad o de urgencia.</p>
       <button onClick={handleBuy} className={(confPedido===true ? "ocultar" : "") + " btn--confirmarPedido"}>Continuar</button>
       <button onClick={()=>setPedidoMP(false)} className={(confPedido===true ? "ocultar" : "") + " btn--cancelarPedido"}>Cancelar</button>
-      {preferenceId && <Wallet initialization={{ preferenceId }} />}
+      {preferenceId && <Wallet initialization={{ preferenceId, redirectMode: 'modal' }} />}
     </div>
   );
 };
