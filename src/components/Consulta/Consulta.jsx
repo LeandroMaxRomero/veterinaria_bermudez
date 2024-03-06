@@ -2,8 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Swal from 'sweetalert2';
 import { Pago } from "../Pago/Pago";
-// Public key: TEST-aea14fc6-7bdb-4cf2-a6d6-22abc5618a2f
-// Access token: TEST-2581844402384055-011622-3fb13bbca95ea90457e86f44a727f8e8-118950741
 
 export const Consulta = () => {
 
