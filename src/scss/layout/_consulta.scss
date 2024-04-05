@@ -8,7 +8,7 @@
     display: grid;
     justify-content: center;
     grid-template-columns: 49.23% 40.77%;
-    column-gap: 10%;
+    column-gap: 5%;
     @include m.tablet {
         max-width: 78rem;
         display: flex;
@@ -93,6 +93,8 @@
         margin-bottom: 9rem;
     }
     h2{
+        margin-top: 0;
+        margin-bottom: 1rem;
         color: v.$violeta;
         font-family: v.$fuente;
         font-size: 2rem;
@@ -100,12 +102,18 @@
         font-weight: 700;
         line-height: normal;
         @include m.tablet {
-            text-align: center;
-        }
-        @include m.mobile {
-            text-align: start;
+            display: none;
         }
     }
+}
+.consulta__agradecimiento{
+    min-height: 23rem;
+}
+.consulta__precio{
+    min-height: 22.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .box--precio{
     border-radius: 1rem;
@@ -188,12 +196,14 @@
         }
     }
     p,a{
+        margin: 1rem 0 0;
         color: v.$grisFondo;
         font-family: v.$fuente;
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        padding: 0 1rem;
         &:hover{
             u{
                 color: v.$negro;
@@ -254,6 +264,7 @@
         padding: 12rem 1rem 12rem;
         max-width: 39rem;
     }
+    }
 
     .checkout--agradecimiento{
         display: flex;
@@ -271,6 +282,9 @@
             font-weight: 700;
             line-height: 100%;
             margin: 0;
+            @include m.tablet {
+                font-size: 4.5rem;
+            }
             @include m.mobile {
                 font-size: 4rem;
             }
@@ -287,7 +301,6 @@
                 font-size: 1.3rem;
             }
         }
-    }
 
     .checkout--datos{
         @include m.tablet {
@@ -376,4 +389,107 @@
 
 
     
+}
+
+.container__pago{
+    width: 48rem;
+    height: 24rem;
+    border-radius: 2rem;
+    background: v.$blanco;
+    box-shadow: 0px 0px 126px -13px rgba(0, 0, 0, 0.75);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    p{
+        color: v.$negro;
+        text-align: center;
+        font-family: v.$fuente;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0;
+    }
+    button{
+        display: flex;
+        width: 309px;
+        padding: 13px 45px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        border: 0;
+        box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+        
+        color: v.$blanco;
+        font-family: v.$fuente;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+
+        
+    }
+    .btn--confirmar{
+        width: 46rem;
+        display: flex;
+        justify-content: space-around;
+        @include m.mobile {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+    .btn--confirmarPedido{
+        width: 20rem;
+        background: v.$violeta;
+        @include m.mobile {
+            width: 80%;
+        }
+        &:hover{
+            background-color: v.$lila;
+            transition: ease-in 0.25s;
+            color: v.$gris;
+        }
+        &.ocultar{
+            display: none;
+        }
+    }
+    .btn--cancelarPedido{
+        width: 20rem;
+        background: v.$grisClaro;
+        @include m.mobile {
+            width: 80%;
+        }
+        &:hover{
+            background-color: v.$grisFondo;
+            transition: ease-in 0.25s;
+            color: v.$negro;
+        }
+        &.ocultar{
+            display: none;
+        }
+    }
+    .btn--whatsapp{
+        background: #128c7e;
+        padding: 0.5rem;
+        height: 8rem;
+        p{
+            color: v.$blanco;
+        }
+        &:hover{
+            background-color: #25d366;
+            transition: ease-in 0.25s;
+            p{
+                color: v.$grisClaro;
+            }
+        }
+        &.ocultar{
+            display: none;
+        }
+    }
+
 }

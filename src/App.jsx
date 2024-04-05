@@ -5,9 +5,7 @@ import { Navbar } from "./components/Navbar/Navbar";
 import { HomePage } from "./components/Home/HomePage";
 import { Consulta } from "./components/Consulta/Consulta";
 import { NavbarMobile } from "./components/Navbar/NavbarMobile";
-import { Checkout } from "./components/Consulta/Checkout";
 import { TermAndCond } from "./components/TerminosCondiciones/TermAndCond";
-import { Pago } from "./components/Pago/Pago";
 import { Error } from "./components/Error/Error";
 
 function App() {
@@ -20,12 +18,9 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />}/>
             <Route path="/consulta" element={<Consulta />}/>
-            <Route path="/pago" element={<Pago />}/>
-            <Route path="/checkout" element={<Checkout />}/>
             <Route path="/error" element={<Error />}/>
             <Route path="/terminosycondiciones" element={<TermAndCond />}/>
             <Route path="/*" element={<h1>404 NOT FOUND</h1>}/>
-
           </Routes>
           <Footer />
       </BrowserRouter>
